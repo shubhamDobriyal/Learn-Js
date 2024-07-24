@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contentlet="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // PROMISES
+        // Mechanism for handling asynchronous operation. They provide a way to work with asynchronous code in a more structured and readable manner.
+
+        // STATES OF PROMISE:
+        // pending
+        // fullfilled
+        // rejected
+
+        let p1 = new Promise((resolve, reject) => {
+            if(10 > 5){
+                resolve("fetched data");
+            }else{
+                reject("data not fetched");
+            }
+        });
+
+
+        // CONSUMING A PROMISE
+        // then: used when promise is in fulfilled state 
+        // catch: used when promise is in rejected state 
+        // finally: this excute all the time irrespective of fulfilled or rejected state
+
+        p1.then(() => {
+            let div = document.createElement("div").innerText = "this is div";
+            document.body.append(div);
+        });
+
+        p1.catch(() => {
+            console.log("execute when promise is rejected");
+        });
+
+        p1.finally(() => {
+            console.log("execute irrespective of fulfilled or rejected state i.e. execute all the time");
+        });
+
+
+        // PROMISE METHODS
+        // ALL: accept all promise in an array and uses then and catch for all promises
+        // ALLSETTLED: uses then if all promises are either resolved or rejected and uses catch if all promises are neither resolved nor rejected. Catch method output cannot be seen using allsettled method.
+        // ANY: uses then if any one promise is in resolved state else if all promises are in reject state
+        // RACE: uses then for promise whichever executes first depending upon the time else uses catch for error
+
+        let p2 = new Promise((resolve, reject) => {
+            if(20 > 10){
+                resolve("resolved")
+            }else{
+                reject("rejected")
+            }
+        });
+
+        let p3 = new Promise((resolve, reject) => {
+            if(10 === 10){
+                resolve("p3 resolved")
+            }else{
+                reject("p3 rejected")
+            }
+        });
+
+        // all method accepts an array of promises
+        let all = Promise.all([p1, p2, p3]);
+        all.then(() => {
+            console.log("all promises resolved");
+        });
+
+        all.catch(() => {
+            console.log("any one or more promise is in rejected state");
+        });
+
+
+        let settled = Promise.allSettled([p1, p2, p3]);
+
+        // uses catch when all promises are either resolved or rejected
+        settled.then(() => {
+            console.log("all promises resolved or rejected");
+        });
+
+        // uses catch when all promises are neither resolved nor rejected. Catch cannot be seen in settled method
+        settled.catch(() => {
+            console.log("some error in resolving or rejecting all promises");
+        });
+
+        
+        
+        let any = Promise.any([p1, p2, p3]);
+        // uses then if any one promise is in resolved state
+        any.then(() => {
+            console.log("Any one promise is in resolved state");
+        });
+        
+        // uses catch if all promises are in reject state
+        any.catch(() => {
+            console.log("all promises are in rejected state");
+        });
+
+
+
+
+        let p4 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("promise 4");
+            }, 5000)
+        });
+
+        let p5 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("promise 5");
+            }, 1000)
+        });
+
+        let p6 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("something went wrong");
+            }, 100)
+        });
+
+        let race = Promise.race([p4, p5, p6]);
+        
+        // uses then for promise winning the race
+        race.then((msg) => {
+            console.log(msg);
+        });
+        
+        race.catch((errmsg) => {
+            console.log(errmsg);
+        })
+    </script>
+</body>
+</html>

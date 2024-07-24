@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100&display=swap');
+
+/* CUSTOM VARIBLES IN CSS ARE DEFINED AT TOP AND CAN BE USED ANYWHERE */
+
+/* CREATE CSS VARIABLE IN ROOT USING -- OPERATOR */
+:root{
+    --shubham: rgb(black);
+}
+
+/* USING CUSTOM VARIABLE USING VAR FUNCTION */
+main{
+    color: var(--shubham);
+}
+
+/* 
+        LINKING CSS TO HTML FILES  
+        1. INLINE CSS
+        <div style="color:red">
+
+        2. INTERNAL CSS
+        <style> 
+        div{
+
+            color:red;
+        }
+
+        </style>
+
+        3. EXTERNAL CSS */
+
+/* 
+        CSS SELECTORS ARE OF FOLLOWING TYPES:
+        
+        1. SIMPLE SELECTORS
+            Simple selectors are of 5 types:
+            /* UNIVERSAL SELECTOR */
+* {
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+/* ID SELECTOR */
+#box1 {
+    height: 200px;
+    width: 300px;
+    background-color: brown;
+}
+
+/* GROUP SELECTORS */
+div,
+section,
+article {
+    margin: 10px;
+}
+
+/* CLASS SELECTOR */
+.box2 {
+    height: 300px;
+    width: 200px;
+    background-color: aquamarine;
+}
+
+.artcolor {
+    background-color: yellow;
+}
+
+/* TAGNAME SELECTOR */
+article {
+    height: 100px;
+    width: 200px;
+    background-color: cadetblue;
+    border: 2px solid maroon;
+}
+
+/* 
+        
+/* 2. COMBINATOR SELECTORS */
+
+/* DESCENDENT SELECTORS : We use space as decendent selector for selecting an element */
+
+section div {
+    background-color: yellow;
+}
+
+
+/* CHILD SELECTORS : We use > as child selector for selecting child */
+
+section>div {
+    background-color: blueviolet;
+}
+
+/* ADJACENT SIBLINGS : We use + as adjacent selector for adjacent elements */
+
+article+div {
+    background-color: black;
+    color: white;
+}
+
+/* GENERAL SIBLINGS : We use ~ as general selector for selecting all siblings after a parent */
+
+section~div {
+    background-color: coral;
+}
+
+/*  
+
+        /* 3. PSEUDO CLASS SELECTORS */
+
+/* 1. Active */
+a:active {
+    color: rgb(100, 220, 20);
+}
+
+/* 2. Link */
+a:link {
+    color: lightgreen;
+}
+
+/* 3. Hover */
+a:hover {
+    color: rgb(1, 5, 4);
+}
+
+/* 4. Visited */
+a:visited {
+    color: rgb(199, 196, 194);
+}
+
+/* 5. FOCUS */
+input:focus {
+    color: black;
+}
+
+/* 6. FOCUS WITHIN */
+input:focus-within {
+    color: blueviolet;
+}
+
+/* 7. FIRST CHILD */
+li:first-child {
+    background-color: blanchedalmond;
+}
+
+/* 8. LAST CHILD */
+li:last-child {
+    background-color: blue;
+}
+
+/* 9. nth CHILD */
+li:nth-child(3) {
+    background-color: cyan;
+}
+
+/* 4. PSEUDO ELEMENT SELECTORS */
+
+/* FIRST LETTER */
+p::first-letter {
+    color: rgb(17, 17, 53);
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+/* FIRST LINE */
+p::first-line {
+    color: green;
+}
+
+/*  SELECTION */
+p::selection {
+    color: brown;
+    background-color: black;
+}
+
+/* BEFORE */
+
+h1::before {
+    content: "HELLO ";
+}
+
+h1::after {
+    content: " STUDENTS";
+}
+
+/* 
+
+TYPES OF CSS UNITS 
+
+1. ABSOLUTE
+
+    pixels
+
+2. RELATIVE
+
+    em: current element font size reference  1em = 16px
+
+    rem: reference of font size to root element
+
+    ch: 1ch is equal to width of a 0
+
+    vw: does not calculate width of a scrollbar
+
+    vh: does not calculate height of a scroll bar
+
+    %: includes height and width of scroll bar
+            
+*/
+
+
+/* SOME TEXT PROPERTIES 
+            
+    TEXT-ALIGN: alignment for first line
+    TEXT ALIGN LAST: alignment for last line 
+    TEXT DECORATION: change text decoration
+    TEXT SHADOW: provide shadow using x-axis y-axis blurr color; 
+    TEXT INDENT: providing whitespace before
+    TEXT TRANSFORM: capitalise/uppercase/lowercase/none;
+
+*/
+
+p {
+    text-align: justify;
+    text-decoration: none;
+    text-shadow: 10px 10px 5px red;
+    text-indent: 100px;
+    text-transform: uppercase;
+}
+
+
+/* SOME FONT PROPERTIES 
+
+    FONT SIZE: by default 16 pixels;
+    FONT WEIGHT: boldness
+    FONT FAMILY: different fonts
+    WE CAN USE GOOGLE FONTS TO IMPORT MORE DIFFERENT TYPES OF FONTS
+       
+*/
+
+p {
+    font-size: large;
+    font-weight: 200;
+    font-family: 'Noto Sans';
+    font-style: oblique;
+}
+
+
+
+
+
+/* SELECTORS2.html FILE CSS */
+
+/* SOME BORDER PROPERTIES */
+
+#a {
+    height: 500px;
+
+    /* SHORT HAND BORDER PROPERTIES */
+    border: 2px dotted black;
+
+    /* OR
+                    border-width: 2px;
+                    border-style: dotted;
+                    border-color: black; 
+                    */
+
+    /* SHORT HAND BORDER TOP PROPERTIES */
+    border-top: 10px solid red;
+
+    /* OR
+                    border-top-color: red;
+                    border-top-width: 10px;
+                    border-style: solid; 
+                    */
+
+    /* SOME BORDER RADIUS PROPERTIES */
+
+    /* border-radius: 20px; */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+    /* SOME BACKGROUND PROPERTIES */
+
+    background-color: rgba(10, 20, 30, 0.23);
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#b{
+    background: linear-gradient(red, green, green, blue);
+    height: 100px;
+
+    /* FOR CIRCULAR GRADIENT 
+    background: radial-gradient(blue, orange, red); */
+}
+
+/* BOX MODEL */
+/* ADJUST BOX SIZE THAT IS HEIGHT AND WIDTH OF THE BOX */
+
+/* USE !IMPORTANT PROPERTY TO GIVE HIGHER PRIORITY */
+main{
+    height: 200px;
+    width: 200px;
+    background-color: blue !important;
+    border: 1px solid black;
+    padding: 10px;
+    /* margin: 10px; */
+    box-sizing: border-box;
+    background-color: brown;
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid black;
+    padding: 10px;
+    margin: 10px; */
+    background-color: black;
+
+    /* POSITIONS IN CSS */
+    position: fixed;
+}
+
+aside{
+    height: 300px;
+    width: 700px;
+    background-color: limegreen;
+    position: sticky;
+    top: 70px;
+}
+
+

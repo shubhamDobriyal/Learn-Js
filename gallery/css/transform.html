@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: 50px;
+            width: 300px;
+            background-color: cadetblue;
+        }
+
+        div:hover{
+            transition: 5s;
+
+            /* ROTATE OVER X OR Y AXIS */
+            transform: rotate(360deg);
+            /* 
+                ROTATEX()
+                ROTATEY() 
+            */
+        }
+        
+        nav{
+            height: 100px;
+            width: 50px;
+            background-color: rgb(106, 160, 95);
+        }
+        nav:hover{
+
+            /* MOVEMENT OVER X OR Y AXIS */
+            transform: translate(500px);
+            /* 
+                TRANSLATEX()
+                TRANSLATEy() 
+            */
+        }
+
+        aside{
+            height: 100px;
+            width: 50px;
+            background-color: rgb(160, 95, 144);
+        }
+
+        aside:hover{
+            /* CHANGE SIZE */
+            transform: scale(1.5);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <nav></nav>
+    <aside></aside>
+</body>
+</html>

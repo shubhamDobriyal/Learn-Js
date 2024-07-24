@@ -1,0 +1,58 @@
+.nav-search-input::placeholder {
+	color: #6a6a6a;
+}
+.cmt-input {
+	border: none;
+	border-bottom: 1px solid #414041;
+	width: 100%;
+}
+.cmt-input::placeholder {
+	font-size: 13px;
+}
+
+.cmt-cancel-btn {
+	background-color: transparent;
+	border: none;
+	font-weight: 500;
+	font-size: small;
+}
+.comment-btn {
+	background-color: #f2f2f2;
+	border: none;
+	border-radius: 20px;
+	padding: 5px 10px;
+	color: #909191;
+	font-weight: 500;
+	font-size: small;
+}
+.cmt-content-name {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.offcanvas-part:hover .offcanvas-part::-webkit-scrollbar {
+	display: block;
+}
+.offcanvas-part::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 30px;
+}
+
+/* Track */
+.offcanvas-part::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+}
+
+/* Handle */
+.offcanvas-part::-webkit-scrollbar-thumb {
+	background: rgb(190, 189, 190);
+	border-radius: 10px;
+}
+
+button {
+	cursor: pointer;
+}
+.card-hover:hover {
+	cursor: pointer;
+}

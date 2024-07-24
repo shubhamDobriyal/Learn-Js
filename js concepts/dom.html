@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">HELLO WORLD</h1>
+    <ul class="list">
+        <li>NAME</li>
+        <li>CLASS</li>
+    </ul>
+    <ul class="list">
+        <li>NAME</li>
+        <li>CLASS</li>
+    </ul>
+    <ul class="list">
+        <li>NAME</li>
+        <li>CLASS</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sunt aspernatur incidunt natus! Obcaecati ab dolor, voluptatum sed, nesciunt atque, ex facere qui quae pariatur totam nihil! Labore, alias neque?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ab cupiditate expedita numquam error illo qui quis facere laboriosam id eveniet nulla voluptas assumenda saepe nemo pariatur velit, placeat molestiae.</p>
+    <script>
+        console.log(document.getElementById("heading").innerText);
+        console.log(document.getElementsByClassName("list"));
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.querySelector("#heading"));
+        console.log(document.querySelectorAll(".class"));
+
+
+// get elements by tagname and classname returns a html collection impure array so we cannot use array methods on it without converting it into pure array
+        let p = document.getElementsByTagName("p");
+        // convert impure array to pure array using array.from()
+        let pureArray = Array.from(p);
+        pureArray.forEach((element)=>{
+            console.log(element);
+        });
+
+ 
+
+    </script>
+</body>
+</html>

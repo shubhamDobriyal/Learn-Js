@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 70px;
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: start;
+    align-items: center;
+}
+nav>.logo{
+    width: 30%;
+    height: 70px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2SuL4AhN8u_Z9C2DzB1wdJgN56llttYlK-A&usqp=CAU");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 30px;
+}
+nav>.menu{
+    width: 90%;
+}
+nav>.menu>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+    font-weight: 700;
+}
+
+main{
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+main>.user-list{
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+main>.user-description{
+    height: inherit;
+    width: 80%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>.user-list>.list-items{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.users-image{
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+}
+
+main>.user-list>.list-items>h3{
+    text-align: center;
+}
+
+main>.user-description>.container{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .left-side,  */
+.right-side{
+    height: inherit;
+}
+
+/* .left-side{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d2c5e;
+    color: white;
+}
+
+/* .img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+} */
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+    color: #007185;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.card>.card-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card>.card-head>.profile-img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.card>.card-body>.user-following{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.card>.card-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.card-footer>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* span{
+    color: #fff!important;
+    background-color: #CC0C39;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    text-align: center;
+    font-size: small;
+} */

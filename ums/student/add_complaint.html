@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>College Complaint Filing</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="mb-4">File a Complaint</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="rollNumber">Roll Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="rollNumber"
+            placeholder="Enter Your Roll Number"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="complaintCategory">Complaint Category:</label>
+          <select class="form-control" id="complaintCategory" required>
+            <option value="academic">Academic Issues</option>
+            <option value="facility">Facility Issues</option>
+            <option value="social">Social Issues</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="complaintDescription">Complaint Description:</label>
+          <textarea
+            class="form-control"
+            id="complaintDescription"
+            rows="4"
+            placeholder="Enter Complaint Description"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fileUpload">Attach Relevant Files (if any):</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="fileUpload"
+            accept=".pdf, .doc, .docx"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Complaint</button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // NESTED FUNCTIONS
+
+    // flow of nested function is unidirectional
+    // child can access parent variables but parentcannot access child variables
+        
+    // function parent(){
+    //         let money = 2000;
+    //         let car = "audi";
+    //         console.log()
+    //         function child(){
+    //             let savings = 100;
+    //             console.log(money + savings);
+    //         }
+    //         child();
+    //     }
+    //     parent();
+
+
+
+        // LEXICAL SCOPING OR SCOPE CHAINING
+
+    // ability of js engine to search a variable in outer scope when it is not available in local scope is lexical scoping or scope chaining. 
+
+    // ability of js engine to 
+    // search a variable out of local scope is called lexical scoping or scope chaining
+
+    // closure is a type of memory which is created to access variables from parent
+        // money variable can be accessed in
+
+    // whenever the child  function needs a property from parent function th closure will be formed and it consists of only required data
+
+    // closure allows inner function to access the outer scope of a function closure helps in binding a funtion to its outer boundary and is created automatically whenever a function is created 
+
+
+    // JAVASCRIPT CURRYING
+    // calling child function along with parent by using one more paranthesis
+    
+    
+    // function parent(){
+    //         let money = 2000;
+    //         // console.log(money)
+    //         function child(){
+    //             let savings = 100;
+    //             console.log(savings);
+    //         }
+    //         return child;
+    //     }
+    //     parent();
+
+// IIFE IMMEDIATE INVOKING FUNCTION EXPRESSION
+// calling function immediately at the time of declaration
+// we can invoke anonymous function using IIFE
+// IIFE function executes only once 
+
+
+// normal function
+// function fun(){
+//     console.log("helloo")
+// }
+// fun();
+
+// // IIFE FUNCTION
+// (function(){
+//     console.log("IIFE");
+// })();
+        
+
+
+// ARROW FUNCTION
+// no return keyword and curly braces required with single return value
+// let a = () => "hello";
+// console.log(a());
+// // no parantheses required when no arguments use underscore instead
+// let b =_=> "no arguments";
+// console.log(b());
+
+
+
+
+// HIGHER ORDER AND CALLBACK FUNCTION
+// The function which accepts other function as an argument is HIGHER ORDER FUNCTION
+
+// The function that is being passed as an argument to another function this function is called CALLBACK FUNCTION
+
+
+// this is callback function
+// function eat(){
+//     return "pizzzaaaaa";
+// }
+
+// // this is higher order function
+// function food(e){
+//     console.log(e())
+// }
+
+// food(eat);
+
+// CONSTRUCTOR FUNCTION : used to create an object
+
+    // let emp1 = {
+    //     fname : "raj",
+    //     id : 1,
+    //     company : "IBM",
+    //     salary : 20000
+    // }
+
+    function employee(N, ID, COM, SAL){
+        this.fname = N;
+        this.id = ID;
+        this.company = COM;
+        this.salary = SAL;
+        this.welcome = function(){
+            console.log(`Employee name is ${this.fname} with an id ${this.id} and company name ${this.company} having salary of ${this.salary}`);
+        }
+    }
+
+    let emp1 = new employee("raj", 1, "IBM", 20000);
+    console.log(emp1)
+    emp1.welcome();
+
+
+    class employees{
+        constructor(N, ID, COM, SAL){
+            console.log("this is constructor");
+            this.fname = N;
+            this.id = ID;
+            this.company = COM;
+            this.salary = SAL;
+            this.welcome = function(){
+                console.log("welllcomee");
+            }
+        }
+
+        static xyz(){
+            console.log("static function");
+        }
+        
+    }
+
+    let emp2 = new employees("rajjj", 51, "IBM", 50000);
+    console.log(emp2)
+    emp2.welcome();
+    employees.xyz();
+
+
+    </script>
+</body>
+</html>

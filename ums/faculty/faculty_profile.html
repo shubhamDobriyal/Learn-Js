@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Teacher ID Card</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        max-width: 400px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: #fff;
+        margin-top: 20px;
+      }
+
+      .card-header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: center;
+      }
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 2px solid #007bff;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      .info-icon {
+        color: #007bff;
+        font-size: 18px;
+        margin-right: 5px;
+      }
+
+      .info-line {
+        margin-bottom: 15px;
+      }
+
+      .barcode {
+        width: 100%;
+        height: 40px;
+        background-color: #333;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h4>Teacher Profile</h4>
+        </div>
+        <div class="card-body">
+          <!-- Teacher Information -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScrx6G9lWbaAoTV1EKNhrLLTzN7-L4O83fRw&usqp=CAU"
+            alt="Teacher Image"
+            class="avatar"
+          />
+          <h5 class="card-title">John Doe</h5>
+          <div class="info-line">
+            <i class="fas fa-chalkboard-teacher info-icon"></i
+            ><strong>Department:</strong> Computer Science
+          </div>
+          <div class="info-line">
+            <i class="fas fa-phone info-icon"></i
+            ><strong>Mobile:</strong> 123-456-7890
+          </div>
+          <div class="info-line">
+            <i class="fas fa-envelope info-icon"></i
+            ><strong>Email:</strong> john.doe@example.com
+          </div>
+          <div class="info-line">
+            <i class="fas fa-map-marker-alt info-icon"></i
+            ><strong>Address:</strong> 123 Main St, Cityville
+          </div>
+          <div class="info-line">
+            <i class="fas fa-graduation-cap info-icon"></i
+            ><strong>Qualifications:</strong> PhD in Computer Science
+          </div>
+          <div class="info-line">
+            <i class="fas fa-clock info-icon"></i><strong>Experience:</strong> 5
+            years
+          </div>
+
+          <!-- Barcode -->
+          <div class="barcode"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  </body>
+</html>

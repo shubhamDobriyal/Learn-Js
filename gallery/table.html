@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="list.html">Lists</a></li>
+            <li><a href="card.html">Images</a></li>
+            <li><a href="video.html">Video and Audio</a></li>
+        </ul>
+    </nav>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <table>
+            <form action="">
+                <tr> 
+                    <td> 
+                        <label for="name"> Name </label> 
+                    </td> 
+                    <td>
+                        <input type="text" id="name" placeholder="Enter your name" required /> 
+                    </td> 
+                </tr> 
+                
+                <tr> 
+                    <td>
+                        <label for="email"> Email </label> 
+                    </td> 
+                    <td>
+                        <input type="email" id="email" placeholder="Enter your email" required  /> 
+                    </td> 
+                </tr> 
+                
+                <tr> 
+                    <td>
+                        <label for="phone"> Phone </label> 
+                    </td> 
+                    <td>
+                        <input type="number" min="0" id="phone" placeholder="Enter your number" required /> 
+                    </td> 
+                </tr> 
+    
+                <tr> 
+                    <td>
+                        <label for="address"> Address </label> 
+                    </td> 
+                    <td>
+                        <textarea name="address" id="" cols="21" rows="10" placeholder="Enter your address"></textarea>
+                    </td> 
+                </tr> 
+    
+                <tr> 
+                    <td>
+                        <label for="gender"> Gender </label> 
+                    </td> 
+                    <td>
+                        <label for="male">Male</label><input type="radio" name="gender">
+                        <label for="female">Female</label><input type="radio" name="gender">
+                    </td> 
+                </tr> 
+                
+                <tr> 
+                    <td>
+                        <label for="hobbies"> Hobbies </label> 
+                    </td> 
+                    <td>
+                        <input type="checkbox" />Music
+                        <input type="checkbox" />Playing  
+                    </td> 
+                </tr>
+    
+                <tr> 
+                    <td>
+                        <label for="education"> Highest Education </label> 
+                    </td> 
+                    <td>
+                        <select name="" id="">
+                            <option value="" selected disabled>Select Highest Education</option>
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">Diploma</option>
+                            <option value="">B.Tech.</option>
+                        </select>
+                    </td> 
+                </tr>
+    
+                <tr> 
+                    <td>
+                        <label for="experience"> Experience in Years </label> 
+                    </td> 
+                    <td>
+                        <input type="range" min="0" max="100"/> 
+                    </td> 
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+
+</body>
+</html>

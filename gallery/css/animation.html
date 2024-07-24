@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+    /* CREATE AN ANIMATION USING KEYFRAMES. GIVE A NAME TO IT 
+    AND THEN PROVIDE (FROM) AND (TO) PARAMETERS TO IT
+    */
+        @keyframes move {
+            from {
+                left: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 60%;
+            }
+
+        }
+
+        /* WE CAN ALSO PROVIDE PERCENTAGE PARAMETERS FOR ANIMATIONS */
+
+        @keyframes move {
+            0% {
+                left: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 60%;
+            }
+
+            50%{
+                top: 55%;
+                left: 60%;
+            }
+
+            75%{
+                top: 55%;
+                left: 0;
+            }
+
+            100%{
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+    /* USE THE ANIMATION NAME, ANIMATION DURATION AND ANIMATION 
+    DELAY FOR SMOOTH RUNNING OF ANIMATION 
+    */
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            transform: rotate(360deg);
+            position: absolute;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0, 1.2, 2.23, 1.2
+            );
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

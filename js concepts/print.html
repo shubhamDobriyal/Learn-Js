@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">one
+        <button onclick="prints('one')">one</button>
+    </div>
+    <div id="two">two Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia necessitatibus, commodi unde et eos totam ducimus numquam temporibus magni sint. Hic dolores ratione vel minus repudiandae mollitia maxime, voluptatibus recusandae!
+        ,<button onclick="prints('two')">two</button>
+    </div>
+    <script>
+        let one = document.querySelector("one");
+        let two = document.querySelector("two");
+
+        function prints(id){
+            var backup = document.body.innerHTML;
+            var  content = document.getElementById(id).innerHTML;
+            document.body.innerHTML = content;
+            window.print();
+            document.body.innerHTML = backup;
+
+        }
+
+    </script>
+</body>
+</html>

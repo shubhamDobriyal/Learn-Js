@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="para">i am shubham</p>
+    <button onclick="startTime()">Start</button>
+    <button onclick="stopTime()">Stop</button>
+    <script>
+      //    set time out set a timer which execute code after timer ecpires
+
+      //    set interval repeatedly execute code with fixed time delay
+
+      //   clear interval clears the interval set by set interval
+
+      let data = document.querySelector("#para");
+      let timerRef;
+      let num = 0;
+
+      function startTime() {
+        data.innerHTML = "loading data...";
+        // setTimeout(() =>{
+        //     data.innerHTML = "welcome to my channel";
+        // }, 5000);
+        timerRef = setInterval(() => {
+          data.innerHTML = `welcome to my channel ${num}`;
+          num++;
+        }, 1000);
+      }
+
+      function stopTime() {
+        clearInterval(timerRef);
+      }
+    </script>
+  </body>
+</html>

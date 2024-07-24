@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let h1 = document.createElement("h1");
+        // let p = document.createElement("p");
+        // let div = document.createElement("div");
+
+        // h1.innerText = "HELLO WORLD";
+        // p.innerText = "I am a para";
+        // div.innerHTML = "<h3>shubham</h2>";
+        // document.body.append(h1, p, div);
+
+
+        // h1.setAttribute("class", "heading");
+        // h1.style.backgroundColor = "red";
+        
+        // //remove or delete an element
+        // p.remove();
+
+
+
+    let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    
+    let tr1 = document.createElement("tr");
+    let tr2 = document.createElement("tr");
+
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+    let td4 = document.createElement("td");
+    let td5 = document.createElement("td");
+    let td6 = document.createElement("td");
+
+    let th1 = document.createElement("th");
+    let th2 = document.createElement("th");
+    let th3 = document.createElement("th");
+    let th4 = document.createElement("th");
+    let th5 = document.createElement("th");
+    let th6 = document.createElement("th");
+
+    th1.innerText = "Mon";
+    th2.innerText = "Tues";
+    th3.innerText = "Wed";
+    th4.innerText = "Thurs";
+    th5.innerText = "Fri";
+    th6.innerText = "Sat";
+
+    tr1.append(th1, th2, th3, th4, th5, th6);
+    thead.append(tr1);
+    table.append(thead);
+
+    td1.innerText = "html";
+    td2.innerText = "css";
+    td3.innerText = "javas";
+    td4.innerText = "laravel";
+    td5.innerText = "php";
+    td6.innerText = "codeigniter";
+
+    tr2.append(td1, td2, td3, td4, td5, td6);
+    table.append(tr2);
+    
+    document.body.append(table);
+
+
+
+    </script>
+</body>
+</html>

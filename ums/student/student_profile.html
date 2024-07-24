@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Student Profile ID</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .id-card {
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 50px;
+      }
+      .profile-image {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="id-card">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Profile Image"
+              class="profile-image"
+            />
+            <h4 class="text-center">Student Profile</h4>
+            <hr />
+
+            <!-- Student Information -->
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Name:</strong>
+                <p>John Doe</p>
+              </div>
+              <div class="col-md-6">
+                <strong>Father's Name:</strong>
+                <p>John Doe Sr.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Mother's Name:</strong>
+                <p>Jane Doe</p>
+              </div>
+              <div class="col-md-6">
+                <strong>Number:</strong>
+                <p>(123) 456-7890</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Email:</strong>
+                <p>john.doe@example.com</p>
+              </div>
+              <div class="col-md-6">
+                <strong>Date of Birth:</strong>
+                <p>1990-01-01</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Gender:</strong>
+                <p>Male</p>
+              </div>
+              <div class="col-md-6">
+                <strong>Address:</strong>
+                <p>123 Main St, Cityville</p>
+              </div>
+            </div>
+
+            <hr />
+
+            <!-- Academic Information -->
+            <div class="row">
+              <div class="col-md-4">
+                <strong>10th %:</strong>
+                <p>90%</p>
+              </div>
+              <div class="col-md-4">
+                <strong>12th %:</strong>
+                <p>85%</p>
+              </div>
+              <div class="col-md-4">
+                <strong>Department:</strong>
+                <p>Computer Science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

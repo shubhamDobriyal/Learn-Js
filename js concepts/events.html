@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* main{
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+            width: 600px;
+        }
+
+        section{
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 400px;
+        } */
+
+        div{
+            border: 1px solid;
+            height: 50px;
+            width: 500px;
+        }
+
+        .container{
+            display: flex;
+            padding: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="btn1()">Click me</button>    
+    <button ondblclick="btn2()">Click me twice</button>
+    <button class="w">woww</button>
+
+    <main>
+        <section>
+            <div></div>
+        </section>
+    </main> -->
+
+    <!-- <script>
+        // onmousedown
+        // onmouseenter
+        // onmouseleave
+        // onmouseup
+        // onmouseover
+        // onmouseout
+        // onmousemove
+        // onkeydown
+        // onkeypress
+        // onkeyup
+    //     let btn = document.querySelector(".w");
+    //     btn.addEventListener("click", () =>{
+    //         alert("wowww executed");
+    //     })
+    // function btn1(){
+    //         alert("Single Click");
+    //     }
+    //     function btn2(){
+    //         alert("Double click successfull");
+    //     }
+
+
+    //     let main = document.querySelector('main');
+    //     let section = document.querySelector('section');
+    //     let div = document.querySelector('div');
+
+
+        // capture phase outside to inside
+        // main.addEventListener('click', (e) => {
+        //     main.style.backgroundColor = "red";
+        //     console.log("mainnn");
+        //     e.stopPropagation();
+        // }, true)
+        // section.addEventListener('click', (e) => {
+        //     section.style.backgroundColor = "green";
+        //     console.log("section");
+        //     e.stopPropagation();
+        // }, true)
+        // div.addEventListener('click', (e) => {
+        //     div.style.backgroundColor = "yellow";
+        //     console.log("mainnn");
+        //     e.stopPropagation();
+        // }, true)
+        
+        
+        
+        
+        //bubbling phase inside to outside 
+        // main.addEventListener('click', (e) => {
+        //     main.style.backgroundColor = "red";
+        //     console.log("mainnn");
+        //     e.stopPropagation();
+
+        // }, false)
+        // section.addEventListener('click', (e) => {
+        //     section.style.backgroundColor = "green";
+        //     console.log("section");
+        //     e.stopPropagation();
+
+        // }, false)
+        // div.addEventListener('click', (e) => {
+        //     div.style.backgroundColor = "yellow";
+        //     console.log("mainnn");
+        //     e.stopPropagation();
+        // }, false)
+
+        // div.addEventListener('click', (e) => {
+        // console.log("mainnn");
+        // e.stopImmediatePropagation();
+        // });
+        // div.addEventListener('click', (e) => {
+        // console.log("mainnn2");
+        // });
+    </script> -->
+    <div class="container">
+        <div>VIOLET</div>
+        <div>INDIGO</div>
+        <div>BLUE</div>
+        <div>GREEN</div>
+        <div>YELLOW</div>
+        <div>ORANGE</div>
+        <div>RED</div>
+    </div>
+
+    <button onclick="btn()">click</button>
+ <script>
+
+ 
+    let div = document.querySelectorAll('div');
+    div.forEach((ele) =>{
+        ele.addEventListener('mouseover', () =>{
+            let val = ele.innerText;
+            ele.style.backgroundColor = val; 
+        })
+        ele.addEventListener('mouseout', () =>{
+            ele.style.backgroundColor = "white"; 
+        })
+    })
+
+
+    // let a = setTimeout(() => {
+    //     console.log("byee");
+    // }, 1000);
+
+    // let b = setInterval(() => {
+    //     console.log("helloooo")
+    // }, 2000);
+    
+    // function btn(){
+    //     clearInterval(b);
+    // } 
+    
+    </script>
+
+ 
+</body>
+</html>

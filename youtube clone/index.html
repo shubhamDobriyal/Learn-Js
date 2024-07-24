@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Youtube Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top " style="background-color: white; color: black">
+
+        <div class="container-fluid">
+            <div>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="width: 1.2em; height: 1em;"></span>
+                </button>
+                <a class="navbar-brand ms-2" href="#">
+                    <img src="./img/youtube-premium-vector-logo-seeklogo.com/youtube-premium-seeklogo.com.svg" alt=""
+                        width="90px; height:90px">
+                    <sup style="font-size: 11px;">IN</sup>
+                </a>
+            </div>
+            <div class="offcanvas offcanvas-start  overflow-auto" style="width: 13vw; background-color: #fff;"
+                tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation" style="border: none;">
+                            <span class="navbar-toggler-icon" style="width: 1.2em; height: 1em;"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/youtube-premium-vector-logo-seeklogo.com/youtube-premium-seeklogo.com.svg"
+                                alt="" width="90px; height:90px">
+
+                            <sup>IN</sup>
+                        </a>
+                    </div>
+                </div>
+                <div class="offcanvas-body p-4 offcanvas-part">
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"
+                        style="border-bottom: 1px solid #3E3E3F">
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%;  fill: #515050;">
+                                <path
+                                    d="m12 4.44 7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Subscriptions</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M10 9.35 15 12l-5 2.65zM12 7a5 5 0 105 5 5 5 0 00-5-5m0-1a6 6 0 11-6 6 6 6 0 016-6zm0-3a9 9 0 109 9 9 9 0 00-9-9m0-1A10 10 0 112 12 10 10 0 0112 2z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">YouTube Music</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-4"
+                        style="border-bottom: 1px solid #3E3E3F">
+                        <h5 class="text-black d-flex align-items-center">You<span
+                                class="material-symbols-outlined pt-1 ">
+                                chevron_right
+                            </span></h5>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M3,3v18h18V3H3z M4.99,20c0.39-2.62,2.38-5.1,7.01-5.1s6.62,2.48,7.01,5.1H4.99z M9,10c0-1.65,1.35-3,3-3s3,1.35,3,3 c0,1.65-1.35,3-3,3S9,11.65,9,10z M12.72,13.93C14.58,13.59,16,11.96,16,10c0-2.21-1.79-4-4-4c-2.21,0-4,1.79-4,4 c0,1.96,1.42,3.59,3.28,3.93c-4.42,0.25-6.84,2.8-7.28,6V4h16v15.93C19.56,16.73,17.14,14.18,12.72,13.93z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Your channel</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;"
+                                viewBox="0 0 24 24" width="24" focusable="false">
+                                <g>
+                                    <path
+                                        d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM22 12c0 5.51-4.49 10-10 10S2 17.51 2 12h1c0 4.96 4.04 9 9 9s9-4.04 9-9-4.04-9-9-9C8.81 3 5.92 4.64 4.28 7.38c-.11.18-.22.37-.31.56L3.94 8H8v1H1.96V3h1v4.74c.04-.09.07-.17.11-.25.11-.22.23-.42.35-.63C5.22 3.86 8.51 2 12 2c5.51 0 10 4.49 10 10z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">History</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="m10 8 6 4-6 4V8zm11-5v18H3V3h18zm-1 1H4v16h16V4z"></path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Your videos</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Watch later</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Download</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Show more</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-4"
+                        style="border-bottom: 1px solid #3E3E3F">
+                        <h5 class="text-black">Subscriptions</h5>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/channels4_profile.jpg" alt="">
+                            <a class="nav-link active" aria-current="page" href="#">StudyIQ IAS</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/channels4_profile (1).jpg"
+                                alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Indian Football</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/channels4_profile (2).jpg"
+                                alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Goofy Games</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/channels4_profile (3).jpg"
+                                alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Tanmay Bhat</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/unnamed.jpg" alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Sidhu Moose Wala</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/unnamed (1).jpg" alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Love Babbar</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <img class="rounded-circle" width="24" height="24" src="./img/channels4_profile (4).jpg"
+                                alt="">
+                            <a class="nav-link active" aria-current="page" href="#">Amit Bhadana</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Show 106 more</a>
+                        </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-4"
+                        style="border-bottom: 1px solid #3E3E3F">
+                        <h5 class="text-black">Explore</h5>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block;width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M19 3.87v9.77C19 17.7 15.86 21 12 21s-7-3.3-7-7.37v-.13c0-1.06.22-2.13.62-3.09.5-1.19 1.29-2.21 2.27-2.97.85-.66 1.83-1.14 2.87-1.65.39-.19.77-.38 1.15-.58.36-.19.72-.38 1.08-.56v3.22l1.55-1.04L19 3.87M20 2l-6 4V3c-.85.44-1.7.88-2.55 1.33-1.41.74-2.9 1.34-4.17 2.32-1.13.87-2.02 2.05-2.58 3.37-.46 1.09-.7 2.29-.7 3.48v.14C4 18.26 7.58 22 12 22s8-3.74 8-8.36V2zM9.45 12.89 14 10v5.7c0 1.82-1.34 3.3-3 3.3s-3-1.47-3-3.3c0-1.19.58-2.23 1.45-2.81z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Trending</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M7 8c0 2.76 2.24 5 5 5s5-2.24 5-5h-1c0 2.21-1.79 4-4 4s-4-1.79-4-4H7zm9.9-2c-.46-2.28-2.48-4-4.9-4S7.56 3.72 7.1 6H4v14c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6h-3.1zM12 3c1.86 0 3.43 1.27 3.87 3H8.13c.44-1.73 2.01-3 3.87-3zm7 17c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V7h14v13z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">History</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="m10 8 6 4-6 4V8zm11-5v18H3V3h18zm-1 1H4v16h16V4z"></path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Shopping</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                viewBox="0 0 24 24" width="24" focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path
+                                    d="M12 4v9.38c-.73-.84-1.8-1.38-3-1.38-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V8h6V4h-7zM9 19c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm9-12h-5V5h5v2z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Watch later</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z">
+                                </path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Download</a>
+                        </li>
+                        <li class="nav-item d-flex gap-4 align-items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 13%; height: 20%; fill: #515050;">
+                                <path d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"></path>
+                            </svg>
+                            <a class="nav-link active" aria-current="page" href="#">Show more</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="search-block w-25 d-flex justify-content-between align-items-center">
+                <form class="d-flex rounded-pill bg-transparent overflow-hidden" style="width: 90%; " role="search">
+                    <input class="form-control nav-search-input bg-transparent text-white rounded-end-0"
+                        style="border:1px solid #D2D2D3; border-top-left-radius: 30px;border-bottom-left-radius: 30px; color: black !important;"
+                        type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success rounded-start-0 " type="submit"
+                        style="background-color: #F9F9F8; border: 1px solid #D2D2D3;  border-top-right-radius: 30px;border-bottom-right-radius: 30px;   width: 16%;">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #0F0F0F;"></i>
+
+                    </button>
+                </form>
+                <div class="voice-search rounded-circle d-flex  justify-content-center align-items-center"
+                    style="width: 40px; height: 40px; background-color: #F3F3F2;">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+            <div class="nav-profile-block d-flex justify-content-between align-items-center"
+                style="width: 7%; margin-right: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24"
+                    style="pointer-events: none; display: block; width: 17%; height: 17%;" viewBox="0 0 24 24"
+                    width="24" focusable="false">
+                    <path
+                        d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z">
+                    </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                    viewBox="0 0 24 24" width="24" focusable="false"
+                    style="pointer-events: none; display: block; width: 17%; height: 17%;">
+                    <path
+                        d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z">
+                    </path>
+                </svg>
+                <img src="./img/channels4_profile-comment.jpg" alt="" class="rounded-circle"
+                    style="width: 30px; height: 30px;">
+            </div>
+
+        </div>
+    </nav>
+    <main class="" style="margin-top:3%; padding: 4rem 5rem;">
+        <div class="row">
+            <div class="col-8">
+                <iframe style="width: 58vw; height: 70vh; border-radius: 10px;"
+                    src="https://www.youtube.com/embed/fQfGVzhqxsA">
+                </iframe>
+                <h4 style="font-size: 1rem;">अब तक का सबसे कम समय मे गाया गया सम्पूर्ण सुन्दरकाण्ड पाठ ! Sampurn SunderKand
+                </h4>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center gap-4">
+                        <img src="./img/channels4_profile (4).jpg" style="border-radius: 50%; height: 50px; width: 50px;" alt="">
+                        <div>
+                            <h5 class="m-0" style="font-size: medium;">Bhajan Sadhna</h5>
+                            <p class="m-0" style="font-size: 11px; color:#606060">15.7M subscribers</p>
+                        </div>
+
+                        <button class="bg-black text-white"
+                            style="padding: 0rem 1rem; border-radius: 50px; height: 35px; ">Subscribe</button>
+                    </div>
+                    <div class="d-flex justify-content-evenly align-items-center"
+                        style="width:45%; font-weight:500; font-size: 14px;">
+                        <div class="like-dislike d-flex">
+                            <div class="like d-flex gap-2"
+                                style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 20px 0px 0px 20px; border-right: 1px solid #CECECE;">
+                                <!-- <div class="like-shape" style="height: 62px; width:62px;"> -->
+                                <span class="material-symbols-outlined ">
+                                    thumb_up
+                                </span>
+                                <!-- </div> -->
+                                16 K
+                            </div>
+                            <div class="dislike"
+                                style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 0px 20px 20px 0px;">
+                                <div class="dislike-shape" style="height: 24px; width:24px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                        focusable="false"
+                                        style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                        <path
+                                            d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="share d-flex gap-2 align-items-center"
+                            style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 30px">
+                            <div class="share-shape" style="height: 24px; width:24px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <path
+                                        d="M15 5.63 20.66 12 15 18.37V14h-1c-3.96 0-7.14 1-9.75 3.09 1.84-4.07 5.11-6.4 9.89-7.1l.86-.13V5.63M14 3v6C6.22 10.13 3.11 15.33 2 21c2.78-3.97 6.44-6 12-6v6l8-9-8-9z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="m-0">Share</p>
+                        </div>
+                        <div class="share d-flex gap-2 align-items-center"
+                            style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 30px">
+                            <div class="share-shape" style="height: 24px; width:24px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <path
+                                        d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="m-0">Download</p>
+                        </div>
+                        <div class="share d-flex gap-2 align-items-center"
+                            style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 30px">
+                            <div class="share-shape" style="height: 24px; width:24px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <path
+                                        d="M11 17h2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-3v-1h4V8h-2V7h-2v1h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3v1H9v2h2v1zm5.5-15c-1.74 0-3.41.88-4.5 2.28C10.91 2.88 9.24 2 7.5 2 4.42 2 2 4.64 2 7.99c0 4.12 3.4 7.48 8.55 12.58L12 22l1.45-1.44C18.6 15.47 22 12.11 22 7.99 22 4.64 19.58 2 16.5 2zm-3.75 17.85-.75.74-.74-.73-.04-.04C6.27 14.92 3 11.69 3 7.99 3 5.19 4.98 3 7.5 3c1.4 0 2.79.71 3.71 1.89L12 5.9l.79-1.01C13.71 3.71 15.1 3 16.5 3 19.02 3 21 5.19 21 7.99c0 3.7-3.28 6.94-8.25 11.86z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="m-0">Thanks</p>
+                        </div>
+                        <div class="share d-flex gap-2 align-items-center"
+                            style="padding: 5px 10px; background-color: #F2F2F2; border-radius: 30px">
+                            <div class="share-shape" style="height: 24px; width:24px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                    focusable="false"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <path
+                                        d="M7.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm4.5-1.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm6 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- <div class="more rounded-circle" style="width: 34px; height: 34px; background-color: #F2F2F2;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%; fill: ;">
+                                <path
+                                    d="M7.5 12c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm4.5-1.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm6 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z">
+                                </path>
+                            </svg>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="discription rounded-3 p-2 mt-2" style="background-color: #F3F3F2;">
+                    <p class="m-0" style="font-weight: 500; color:#555454; font-size: 13px;">802K views 5 days ago</p>
+                    <p>Use the code ‘AGLIVE’ to get Our Courses at Maximum discount!<br>Hurry Enrol Now :
+                        <a href="https://bit.ly/3uGJKMx">https://bit.ly/3uGJKMx</a> <br>
+                        …more
+                    </p>
+                </div>
+                <div class="comment mt-3">
+                    <div class="comment-head d-flex align-items-center gap-4">
+                        <h4 style="font-size: 1.2rem;">296 Comments</h4>
+                        <div class="sort d-flex align-items-center gap-2">
+                            <div class="sort-icon" style="width: 22px; height:22px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                    <path d="M21 6H3V5h18v1zm-6 5H3v1h12v-1zm-6 6H3v1h6v-1z"></path>
+                                </svg>
+                            </div>
+                            <p class="m-0" style="font-size: 13px; font-weight: 500; ">Sort by</p>
+                        </div>
+                    </div>
+                    <div class="new-comment d-flex justify-content-between ">
+                        <img src="./img/channels4_profile-comment.jpg"
+                            style="width: 35px; height: 35px; border-radius: 100%;" alt="">
+                        <div style="width: 95%;">
+                            <input type="text" class="cmt-input" placeholder="Add a comment...">
+                            <div class="d-flex justify-content-between w-100 mt-1">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: block; width: 2%; height: 2%; fill: #4F4E4F;">
+                                    <path
+                                        d="M15.83 15c-.52 1.38-2.19 2-3.79 2-1.59 0-3.28-.62-3.85-2h7.64m.69-1H7.49c-.27 0-.49.22-.46.47C7.34 16.83 9.7 18 12.05 18c2.35 0 4.69-1.18 4.93-3.54.03-.25-.2-.46-.46-.46zM12 3c4.96 0 9 4.04 9 9s-4.04 9-9 9-9-4.04-9-9 4.04-9 9-9m0-1C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM6.94 9.73C7.19 9.25 7.72 9 8.5 9c.75 0 1.28.25 1.57.75.14.24.45.32.68.18.24-.14.32-.44.18-.68C10.6 8.68 9.91 8 8.5 8c-1.48 0-2.15.69-2.44 1.27-.13.25-.03.55.21.67.07.04.15.06.23.06.18 0 .36-.1.44-.27zm7 0c.25-.48.78-.73 1.56-.73.75 0 1.28.25 1.57.75.14.24.45.32.68.18.24-.14.32-.44.18-.68C17.6 8.68 16.91 8 15.5 8c-1.48 0-2.15.69-2.44 1.27-.13.25-.03.55.21.67.07.04.15.06.23.06.18 0 .36-.1.44-.27z">
+                                    </path>
+                                </svg>
+                                <div class="comment-button">
+                                    <button class="cmt-cancel-btn">Cancel</button>
+                                    <button class="comment-btn">Comment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-comments mt-4">
+                        <div class="comment-item d-flex gap-3">
+                            <img src="./img/img-cmt1.jpg" class="rounded-circle" style="width: 40px; height: 40px;"
+                                alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">@shashankgangwar3474 <span
+                                        style="font-weight: 400; color: #616785;">4 days
+                                        ago</span></p>
+                                <p>
+                                    Shame on the 2008 Government who didn't attended the funeral of the greatest Army
+                                    officer India has seen. Sam Bahadur sir deserves the Bharat Ratna.
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>735</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/ytc/APkrFKYOa-JOK1FXB27BjY2aEIdlKcmQ44fARg8ixaRKHQ=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">@kalyanguchait7209
+                                    <span style="font-weight: 400; color: #616785;">8 days ago (edited)</span>
+                                </p>
+                                <p>
+                                    When I was in depression, I always study about the biographies of Netaji Subhash
+                                    Chandra Bose, Field Marshall Sam Manekshaw and Gentleman Spymaster RN Kao. These
+                                    three people are the real heroes of our nation, but unfortunately these
+                                    inspirational personel never hounoured by the Bharat Ratna which they deserved.
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>225</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/9Ak3Hj-8X19va12Qw1w_1uUd8vIZlqj-FjUQTFIx_Fe578MTB542F-G-rbbgbZYsez0_KmkYb-Q=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name m-0">@rishabhraj7882<span
+                                        style="font-weight: 400; color: #616785;">4 days
+                                        ago</span></p>
+                                <p>
+                                    If Sam would have wanted then he could have taken control of India by military coup,
+                                    also he had a unwavering support from the armymen. Still, he was loyal to his
+                                    country. Salute to this real braveheart. ❤🇮🇳
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>735</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/3x7265-h5cPSY18UQd82Fq-cjbbolq1159BZ346n3414TKM8QdrkBkIbmNG6cO1xetGyNHCvTQ=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">
+                                    @sudhanshupandey753<span style="font-weight: 400; color: #616785;">9 days
+                                        ago</span></p>
+                                <p>
+                                    Always proud of Indian army 🫡🫡
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>52</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/5WgcUefoTtiT-3QDca4ZIQIE802w4YofvUVLm9pr0a-af89K4MeN5EcJHwqgLuCuNWezgFP-Jw=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">@TamusEducation<span
+                                        style="font-weight: 400; color: #616785;">6 days
+                                        ago</span></p>
+                                <p>
+
+                                    Former Indian Army Chief of Staff Field Marshal Sam Manekshaw once stated that: "If
+                                    a man says he is not afraid of dying, he is either lying or he is a Gurkha."
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>735</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="./img/img-cmt1.jpg" class="rounded-circle" style="width: 40px; height: 40px;"
+                                alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">@shashankgangwar3474 <span
+                                        style="font-weight: 400; color: #616785;">4 days
+                                        ago</span></p>
+                                <p>
+                                    Shame on the 2008 Government who didn't attended the funeral of the greatest Army
+                                    officer India has seen. Sam Bahadur sir deserves the Bharat Ratna.
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>735</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/ytc/APkrFKYOa-JOK1FXB27BjY2aEIdlKcmQ44fARg8ixaRKHQ=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name">@kalyanguchait7209
+                                    <span style="font-weight: 400; color: #616785;">8 days ago (edited)</span>
+                                </p>
+                                <p>
+                                    When I was in depression, I always study about the biographies of Netaji Subhash
+                                    Chandra Bose, Field Marshall Sam Manekshaw and Gentleman Spymaster RN Kao. These
+                                    three people are the real heroes of our nation, but unfortunately these
+                                    inspirational personel never hounoured by the Bharat Ratna which they deserved.
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>225</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item d-flex gap-3">
+                            <img src="https://yt3.ggpht.com/9Ak3Hj-8X19va12Qw1w_1uUd8vIZlqj-FjUQTFIx_Fe578MTB542F-G-rbbgbZYsez0_KmkYb-Q=s48-c-k-c0x00ffffff-no-rj"
+                                class="rounded-circle" style="width: 40px; height: 40px;" alt="">
+                            <div class="cmt-content">
+                                <p class="cmt-content-name m-0">@rishabhraj7882<span
+                                        style="font-weight: 400; color: #616785;">4 days
+                                        ago</span></p>
+                                <p>
+                                    If Sam would have wanted then he could have taken control of India by military coup,
+                                    also he had a unwavering support from the armymen. Still, he was loyal to his
+                                    country. Salute to this real braveheart. ❤🇮🇳
+                                </p>
+                                <div class="like-reply d-flex gap-4">
+                                    <div class="like-dislike d-flex gap-3">
+                                        <div class="like d-flex">
+                                            <div class="like-icon" style="width: 25px; height:25px">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24"
+                                                    width="24" focusable="false"
+                                                    style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                    <path
+                                                        d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <p>735</p>
+                                        </div>
+                                        <div class="dislike-icon" style="width: 25px; height:25px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                                                width="24" focusable="false"
+                                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                <path
+                                                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cmt-reply">
+                                        <p>Reply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4 p-0 m-0 d-flex flex-column gap-3 ">
+                <div class="card d-flex flex-row  bg-transparent  border-0 card-hover">
+                    <img style="border-radius: 5px;"
+                        src="https://i.ytimg.com/vi/LkP65QD0xZ4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA01D7JcAqtdGaX7CqSd0JGap9j2w"
+                        alt="" srcset="">
+                    <div class="card-body py-0 ">
+                        <h6 class="m-0" style="font-size: .9rem;">SHIV TANDAV STROTAM</h6>
+                        <p class="d-flex align-items-center gap-2 m-0" stlye="font-size: .9rem">Abhi and Niyu<svg
+                                xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false" style="pointer-events: none; display: block; width: 7%; height: 7%;">
+                                <path
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                </path>
+                            </svg></p>
+                        <p class="m-0" style="font-size: .9rem;">397K views • 14 hours ago</p>
+                    </div>
+                </div>
+                <div class="card d-flex flex-row  bg-transparent  border-0 card-hover">
+                    <img style="border-radius: 5px;"
+                        src="https://i.ytimg.com/vi/Jz_rtHqSWHY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsUTBxGlJ8w3bH6_epKroBeqmarQ"
+                        alt="" srcset="">
+                    <div class="card-body py-0 ">
+                        <h6 class="m-0" style="font-size: .9rem;">Best songs of Amrinder Gill || Amrinder Gill Songs ||
+                            Jukebox...</h6>
+                        <p class="d-flex align-items-center m-0" stlye="font-size: .9rem">Songs collections AC</p>
+                        <p class="m-0" style="font-size: .9rem;">2.7M views • 8 months ago</p>
+                    </div>
+                </div>
+                <div class="card d-flex flex-row  bg-transparent  border-0 card-hover">
+                    <img style="border-radius: 5px;"
+                        src="https://i.ytimg.com/vi/JtoEoYEcKqY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDueBdy0eQsKr3OgJiZLbX760Crg"
+                        alt="" srcset="">
+                    <div class="card-body py-0 ">
+                        <h6 class="m-0" style="font-size: .9rem;">
+                            Why MONEY and LOVE are important
+                        </h6>
+                        <p class="d-flex align-items-center gap-2 m-0" stlye="font-size: .9rem">Soch by Mohak Mangal<svg
+                                xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false" style="pointer-events: none; display: block; width: 7%; height: 7%;">
+                                <path
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                </path>
+                            </svg></p>
+                        <p class="m-0" style="font-size: .9rem;">1M views • 2 days ago</p>
+                    </div>
+                </div>
+                <div class="card d-flex flex-row  bg-transparent  border-0 card-hover">
+                    <img style="border-radius: 5px;"
+                        src="https://i.ytimg.com/vi/LKvRkSJZh14/hqdefault_live.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBlWDJg0bx68G59Xrg5JZ3nQ_3xxw"
+                        alt="" srcset="">
+                    <div class="card-body py-0 ">
+                        <h6 class="m-0" style="font-size: .9rem;">The 70Th Senior National Championship- Women at...
+                        </h6>
+                        <p class="d-flex align-items-center m-0" stlye="font-size: .9rem">Lamrin Tech Skills University
+                            Punjab</p>
+                        <p class="m-0" style="font-size: .9rem;">397K views • 14 hours ago</p>
+                    </div>
+                </div>
+                <div class="card d-flex flex-row  bg-transparent  border-0 card-hover">
+                    <img style="border-radius: 5px;"
+                        src="https://i.ytimg.com/vi/YDuVz10Z7xU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA2bhNtRxfib21LXVbcWunGVyOVaA"
+                        alt="" srcset="">
+                    <div class="card-body py-0 ">
+                        <h6 class="m-0" style="font-size: .9rem;">
+                            Sufna Banke (Official Video) Harvi | New Punjabi Songs 2021 | Latest Punjabi Songs 2
+                            ...</h6>
+                        <p class="d-flex align-items-center m-0 gap-2" stlye="font-size: .9rem">BANG Music<svg
+                                xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false" style="pointer-events: none; display: block; width: 7%; height: 7%;">
+                                <path
+                                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                </path>
+                            </svg></p>
+                        <p class="m-0" style="font-size: .9rem;">29M views • 1 year ago</p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

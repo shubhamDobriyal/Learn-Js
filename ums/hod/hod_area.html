@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOD Area</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        height: 200px;
+      }
+
+      .button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="teacher-area" class="container">
+      <div class="card">
+        <h2>HOD Area</h2>
+        <p>
+          Welcome to the Teacher Area. Upload attendance, results, manage
+          students, and view complaints.
+        </p>
+        <a href="add_teacher.html" class="button">Add Teacher</a>
+        <a href="#upload-results" class="button">Approve Results</a>
+        <a href="../faculty/faculty_profile.html" class="button"
+          >Teacher Profile</a
+        >
+        <a href="add_student.html" class="button">Add Student</a>
+        <a href="#view-complaints" class="button">View Complaints</a>
+      </div>
+    </section>
+  </body>
+</html>

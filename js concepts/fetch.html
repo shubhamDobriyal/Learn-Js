@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // FETCH
+        // used to send request to backend and it accepts url or api as an argument and it should be in string format. It returns promise object.
+        
+        let api = fetch("https://api.github.com/users");
+        
+        api.then((response) => {
+            let fetchedData = response.json();
+
+            fetchedData.then((data) => {
+                console.log(data);
+                console.log(data[0]);
+                displayData(data);
+            })                    
+        });
+
+        // *************OR*********************
+        // let api = fetch("https://api.github.com/users");
+        // api.then((response) => {
+        //         response.json().then((data) => {
+        //         console.log(data);
+        //         console.log(data[0]);
+        //         displayData(data);
+        //     })
+        // });
+
+        function displayData(datas){
+            let img = document.createElement("img");
+            img.setAttribute("src", `${datas[0].avatar_url}`);
+            document.body.append(img);
+        }
+        
+    </script>
+</body>
+</html>
